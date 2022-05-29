@@ -1,0 +1,1 @@
+PAGE_ACCES_TOKEN = 'chave secreta'

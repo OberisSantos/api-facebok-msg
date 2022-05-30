@@ -1,1 +1,1 @@
-web: python api-meg.py
+web: myapi app.py

@@ -18,6 +18,6 @@ def home():
     return 'Home'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8888',debug=True)
-    #port  =  int ( os.environ.get ( "PORT" ,  5000 )) 
-    #app.execute (host = '0.0.0.0' ,  porta = port )
+    #app.run(host='0.0.0.0', port='8888',debug=True)
+    port  =  int( os.environ.get ( "PORT" ,  5000 )) 
+    app.run(host = '0.0.0.0' ,  porta = port )

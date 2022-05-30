@@ -17,6 +17,10 @@ def callSendAPI(senderPsid, response):
 def home():
     return 'Home'
 
+@app.route('/home', methods=["GET", "POST"])
+def home1():
+    return 'Home1'
+
 if __name__ == '__main__':
     #app.run(host='0.0.0.0', port='8888',debug=True)
     port  =  int( os.environ.get ( "PORT" ,  5000 )) 

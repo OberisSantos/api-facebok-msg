@@ -1,1 +1,1 @@
-web: myapi app.py
+web: app.py

@@ -7,7 +7,7 @@ from core import settings
 from . import configuracao
 import json
 
-SECRET_KEY = 'AXw7SrZCYBAMPCYvk9URaJLdukZCZBKYM1uBtdc61W6YczZ' #chave secreta 
+SECRET_KEY = 'be5345cc79ffccb8039b2d9b5b465ae3' #chave secreta 
 
 
 

@@ -49,26 +49,26 @@ def indexApi(request):
     if request.method == 'GET':
         VERIFY_TOKEN = SECRET_KEY
 
-        if 'hub.mode' in request.args:
-            mode = request.args.get('hub.mode')
+        if 'hub.mode' in request:
+            mode = request('hub.mode')
             print(mode)
 
-        if 'hub.verify_token' in request.args:
-            token = request.args.get('hub.verify_token')
+        if 'hub.verify_token' in request:
+            token = request.get('hub.verify_token')
             print(token)
 
-        if 'hub.challenge' in request.args:
-            challenge = request.args.get('hub.challenge')
+        if 'hub.challenge' in request:
+            challenge = request.get('hub.challenge')
             print(challenge)
         
-        if 'hub.mode' in request.args and 'hub.verify_token' in request.args:
-            mode = request.args.get('hub.mode')
-            token = request.args.get('hub.verify_token')
+        if 'hub.mode' in request and 'hub.verify_token' in request:
+            mode = request('hub.mode')
+            token = request('hub.verify_token')
 
             if mode == 'subscribe' and token == VERIFY_TOKEN:
                 print('WEBHOOK VERIFICADO')
 
-                challenge = request.args.get('hub.challenge')
+                challenge = request('hub.challenge')
 
                 return challenge, 200
             else:
@@ -79,26 +79,26 @@ def indexApi(request):
     if request.method == 'POST':
         VERIFY_TOKEN = SECRET_KEY
 
-        if 'hub.mode' in request.args:
-            mode = request.args.get('hub.mode')
+        if 'hub.mode' in request:
+            mode = request('hub.mode')
             print(mode)
 
-        if 'hub.verify_token' in request.args:
-            token = request.args.get('hub.verify_token')
+        if 'hub.verify_token' in request:
+            token = request('hub.verify_token')
             print(token)
 
-        if 'hub.challenge' in request.args:
-            challenge = request.args.get('hub.challenge')
+        if 'hub.challenge' in request:
+            challenge = request('hub.challenge')
             print(challenge)
         
-        if 'hub.mode' in request.args and 'hub.verify_token' in request.args:
-            mode = request.args.get('hub.mode')
-            token = request.args.get('hub.verify_token')
+        if 'hub.mode' in request and 'hub.verify_token' in request:
+            mode = request('hub.mode')
+            token = request('hub.verify_token')
 
             if mode == 'subscribe' and token == VERIFY_TOKEN:
                 print('WEBHOOK VERIFICADO')
 
-                challenge = request.args.get('hub.challenge')
+                challenge = request('hub.challenge')
 
                 return challenge, 200
             else:
